@@ -15,7 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Test initial directory contents
-      run: 'ls -al'
+      run: |
+        pwd
+        ls -Rl
     - name: Build the Docker image
       run: docker build --tag ubuntu22.04-pandoc --file dockerfile .
     - name: Build the Docker container
@@ -25,6 +27,7 @@ jobs:
     - name: Show me what happened
       run: |
         pwd
+        ls -al
         ls -al output
 
     - uses: actions/upload-artifact@v3
