@@ -53,7 +53,7 @@ jobs:
         echo " TIME IS ALSO THIS: " >> README.md
         echo "  " >> README.md
         echo " $(date -d '-6 hour' +"%I:%M.%S") " >> README.md
-        echo "  " >> README.md
+        echo "   " >> README.md
         echo "  " >> README.md
         cat README.md
     - name: Push to repository
